@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Bootstrap font awesome icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- CSS link -->
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+  <!-- JQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified Bootstrap Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- application javascript -->
+  <script type="text/javascript" src="assets/js/diner.js"></script>
+
+  <title>Diners</title>
+</head>
+<body>
+  <div class = "container">
+
+    <!-- page title -->
+    <div class = "jumbotron">
+      <div class = "row">
+        <div class = "col-lg-3">
+          <img src="assets/img/burgerImg.jpg" alt="Burger Picture" height="767px" width="767px" id = "burger-pic">
+        </div>
+        <div class = "col-lg-9">
+          <h1>Welcome to Eat-A-Burger!</h1>
+          <h3>Select a Burger!</h3>
+          <form id = "sel">
+            <div class = "input-group">
+              <select id = "sel-burger" name = "name" class = "form-control">
+              </select>
+              <span class = "input-group-btn">
+                <input type = "submit" class = "btn btn-default" value = "Select-a-Burger">
+              </span>
+              <div class="invalid-feedback">
+                Please select a burger.
+              </div>
+            </div>
+          </form>
+          <a href="/burgers">Goto Burger View</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class = "row">
+  
+      <!-- Ready to Eat panel -->
+      <div class = "col-lg-6">
+        <div class = "card">
+          <div class = "card-header">
+            <h2>Current Diners!</h2>
+          </div>
+          <div class = "card-body">
+            <ul id = "diner-list">
+              <!-- list of all the diners currently in the database -->
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Number Eaten panel -->
+      <div class = "col-lg-6">
+        <div class = "card">
+          <div class = "card-header">
+            <h2>Number Eaten!</h2>
+          </div>
+          <div class = "card-body">
+            <ul id = "diner-eaten">
+              <!-- list of the diners who have eaten the selected burger w/ quantities -->
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class = "row">
+      <div class = "col-lg-6">
+        <button id = "add-diner" class = "btn btn-default">Add-a-Diner</button>
+      </div>
+      <div class = "col-lg-6">
+        <button id = "del-diner" class = "btn btn-default">Delete-a-Diner</button>
+      </div>
+    </div>
+  
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="add-del-modal" tabindex="-1" role="dialog" aria-labelledby="add-del-modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modal-label">
+            <!-- Insert title based on add or delete -->
+          </h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-data">
+          <!-- Insert controls based on add or delete -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="execute">
+            <!-- Add or Delete -->
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

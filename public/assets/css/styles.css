@@ -1,0 +1,61 @@
+body{
+  background-image: url("../img/background.png");
+  background-color: rgb(221, 188, 144);
+}
+
+#burger-pic {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.jumbotron {
+  background-color: #B30E15;
+  color: #73942C;
+  border: solid 1px #304600;
+}
+
+a {
+  color: #73942C;
+}
+
+a:hover {
+  color: #304600
+}
+
+.card {
+  border-color: #304600;
+  margin-bottom: 25px;
+}
+
+.card-header, .modal-header {
+  background-color: #B30E15;
+  color: #73942C;
+}
+
+.btn.btn-default {
+  float: right;
+  background-color: #CF4C18;
+  color: #024E0E;
+}
+
+.btn.btn-default.btn-block {
+  font-size: 25px;
+}
+
+.card-body, .modal-body, .modal-footer {
+  line-height: 2.5;
+  background-color: #F6A21C;
+  color: #024E0E;
+}
+
+.modal-header, .modal-footer {
+  border: 0;
+}
+
+#del-burger, #del-diner {
+  float: left;
+}
