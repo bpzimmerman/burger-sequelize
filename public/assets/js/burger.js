@@ -125,7 +125,7 @@ $(document).ready(function(){
       $(divId).val("");
       getAllBurgers();
       var userSel = $("#sel-user").val();
-      if (userSel != ""){
+      if (userSel != "" || userSel != null){
         getEatenBurgers(userSel);
       };
     }).fail(function(xhr, responseText, responseStatus){
@@ -235,6 +235,7 @@ $(document).ready(function(){
 
   $("#sel-user").focus(function(){
     $("#sel-user").removeClass("is-invalid");
+    $("#burger-eaten").empty();
   });
 
   getDiners();

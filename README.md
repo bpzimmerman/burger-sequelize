@@ -12,7 +12,7 @@ This application stores a list of burgers, the diner(s) who have eaten them, and
 
 1. The application is located as follows:
 
-   * Heroku deployment: [Burger Bucket List]()
+   * Heroku deployment: [Burger Bucket List](https://burger-bucket-list-2.herokuapp.com)
 
    * GitHub repository: [Burger Bucket List GitHub Repository](https://github.com/bpzimmerman/burger-sequelize)
 

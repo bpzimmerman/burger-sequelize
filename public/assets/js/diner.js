@@ -126,7 +126,7 @@ $(document).ready(function(){
       $(divId).val("");
       getAllDiners();
       var burgerSel = $("#sel-burger").val();
-      if (burgerSel != ""){
+      if (burgerSel != "" || burgerSel != null){
         getEatenBurgers(burgerSel);
       };
     }).fail(function(xhr, responseText, responseStatus){
@@ -201,7 +201,6 @@ $(document).ready(function(){
     });
   });
 
-  // +++++++++++++++++++++++++++++++++++++++++++++++++++++++
     $(document).on("click", "#execute", function(event){
     event.preventDefault();
     if ($(this).attr("data-type") === "add"){
@@ -226,7 +225,6 @@ $(document).ready(function(){
       };
     };
   });
-  // +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
   $("#new-user").focus(function(){
     $("#new-user").removeClass("is-invalid");
@@ -238,6 +236,7 @@ $(document).ready(function(){
 
   $("#sel-burger").focus(function(){
     $("#sel-burger").removeClass("is-invalid");
+    $("#diner-eaten").empty();
   });
 
   getBurgers();
