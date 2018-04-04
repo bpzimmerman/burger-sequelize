@@ -125,7 +125,7 @@ $(document).ready(function(){
       $(divId).val("");
       getAllBurgers();
       var userSel = $("#sel-user").val();
-      if (userSel != "" || userSel != null){
+      if (userSel != "" && userSel != null){
         getEatenBurgers(userSel);
       };
     }).fail(function(xhr, responseText, responseStatus){

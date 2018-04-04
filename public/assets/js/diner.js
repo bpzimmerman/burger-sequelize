@@ -126,7 +126,7 @@ $(document).ready(function(){
       $(divId).val("");
       getAllDiners();
       var burgerSel = $("#sel-burger").val();
-      if (burgerSel != "" || burgerSel != null){
+      if (burgerSel != "" && burgerSel != null){
         getEatenBurgers(burgerSel);
       };
     }).fail(function(xhr, responseText, responseStatus){
